@@ -3,12 +3,12 @@ print()
 weight = float(input("Enter your weight in Kg : "))
 height = float(input("Enter your height in m  : "))
 bmi = ((weight) / (height**2))
-print(f"BMI Value : {bmi}")
+print(f"BMI Value \t\t: {round(bmi, 2)}")
 if bmi < 18.5:
-    print("Category : Underweight")
+    print("Category \t\t: Underweight")
 elif bmi < 25:
-    print("Category : Normal")
+    print("Category \t\t: Normal")
 elif bmi < 30:
-    print("Category : Overweight")
+    print("Category \t\t: Overweight")
 else:
-    print("Category : Obese")
+    print("Category \t\t: Obese")
