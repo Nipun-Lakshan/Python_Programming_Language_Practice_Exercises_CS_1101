@@ -1,6 +1,9 @@
 # CS 1101 - Week 09 - Exercise 10
 print()
-units = int(input("Number of Units Consumed Per Month : "))
+current_reading = int(input("Enter Your Current Reading         : "))
+previous_reading = int(input("Enter Your Previous Reading        : "))
+units = current_reading - previous_reading
+print(f"Number of Units Consumed Per Month : {units}")
 if units <= 60:
     category = 1  # Lower Category
 else:
@@ -8,6 +11,7 @@ else:
 
 if category == 1:
     if units <= 30:
+        
         total_cost = (units * 6) + 100
     else:
         total_cost = (30 * 6) + ((units - 30) * 9) + 250
@@ -22,4 +26,4 @@ else:
     else:
         total_cost = (60 * 15) + (30 * 18) + (30 * 30) + (60 * 42) + (
             (units - 180) * 65) + 2000
-print(f"Total Bill = Rs. {total_cost}.00")
+print(f"Total Bill                         : Rs. {total_cost}.00")
