@@ -35,9 +35,9 @@ def calculate_cost(x, bLen):
 # Printing Final Result Function
 def printDetails(x, bLen):
     cost = (ROAD_KM_COST * (MAX_ROAD_LEN - x)) + (BRIDGE_KM_COST * bLen)
-    print("X: 0" + str(round(x, 2)) + "0Km, Bridge: 0" + str(round(bLen, 2)) +
-          "Km, Road: 0" + str((MAX_ROAD_LEN - x)) + "0Km, Cost: " +
-          str(round(cost, 2)))
+    print("X: 0" + str(round(x, 2)) + "0 Km, Bridge: 0" + str(round(bLen, 2)) +
+          " Km, Road: 0" + str((MAX_ROAD_LEN - x)) + "0 Km, Cost: " +
+          str(round(cost, 2)) + " M")
 
 
 # Main Function
