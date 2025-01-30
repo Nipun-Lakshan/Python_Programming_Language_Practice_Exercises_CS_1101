@@ -1,4 +1,4 @@
-# CS 1101 - Week 10 - Exercise 02 - Methods & Functions Which Related To Lists
+# CS 1101 - Week 10 - Exercise 02 - Number Guessing Game - My One
 
 # Importing Library From Python Standard Libraries
 import random
