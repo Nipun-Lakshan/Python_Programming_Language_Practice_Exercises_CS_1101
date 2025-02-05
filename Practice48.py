@@ -1,4 +1,4 @@
-# CS 1101 - Week 11 Videos - NumPy - Practice 09
+# CS 1101 - Week 11 Videos - Matplotlib - Practice 01
 
 import matplotlib.pyplot as plt
 
