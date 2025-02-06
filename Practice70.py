@@ -4,19 +4,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-X = [1, 2, 3, 4, 5, 6, 7]
-Y = [7.1, 9.8, 45, 90, 163, 274.6, 424]
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([5.9, 7.5, 10.4, 11.2, 15.5])
 
-# polyfit
-coeff = np.polyfit(X, Y, deg=2)
-print(coeff)
-
+coeff = np.polyfit(x, y, deg=2)
 f = np.poly1d(coeff)
-print(f)
 
-XX = np.linspace(0, 8, 1000)
+XX = np.linspace(0, 5, 1000)
 YY = f(XX)
-plt.scatter(X, Y, c='black', s=100, label='data points')
+plt.scatter(x, y, label='data points')
 plt.legend()
+plt.grid(True)
 plt.plot(XX, YY, c='blue')
 plt.show()

@@ -12,10 +12,9 @@ plt.scatter(
     y,
 )
 
-coeffs = np.polyfit(x, y, 2)
+coeffs = np.polyfit(x, y, 1)
 print(coeffs)
 p = np.poly1d(coeffs)
-x_fit = linspace(0,100,1000)
 y_fit = p(x)
 plt.plot(x, y_fit,linestyle='--', color='r')
 plt.title('Best Fitted Line')
@@ -23,4 +22,6 @@ plt.xlabel('X Axis')
 plt.ylabel('Y Axis')
 plt.grid(True)
 plt.xticks(x)
-plt.show()
+#plt.show()
+
+# 
