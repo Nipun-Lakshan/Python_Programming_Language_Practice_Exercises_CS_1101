@@ -17,3 +17,4 @@ plt.legend()
 plt.grid(True)
 plt.plot(XX, YY, c='blue')
 plt.show()
+

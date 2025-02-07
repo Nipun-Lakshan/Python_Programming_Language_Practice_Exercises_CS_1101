@@ -16,12 +16,15 @@ coeffs = np.polyfit(x, y, 1)
 print(coeffs)
 p = np.poly1d(coeffs)
 y_fit = p(x)
-plt.plot(x, y_fit,linestyle='--', color='r')
+plt.plot(x, y_fit, linestyle='--', color='r')
 plt.title('Best Fitted Line')
 plt.xlabel('X Axis')
 plt.ylabel('Y Axis')
 plt.grid(True)
 plt.xticks(x)
-#plt.show()
+plt.show()
 
-# 
+# RMSE Calculation
+rmse = np.sqrt(np.mean((y - y_fit)**2))
+print(rmse)
+
