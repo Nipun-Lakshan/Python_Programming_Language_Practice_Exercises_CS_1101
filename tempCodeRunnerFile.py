@@ -1,1 +1,1 @@
-coeff1 = np.pl
+plt.scatter(bmi_smoker_list, charges_smoker_list, color='blue', label='Smoker')
