@@ -42,9 +42,7 @@ for order in range(1, 6):
     plt.xlabel('L')
     plt.ylabel('T')
     plt.grid(True)
-    plt.show()
 
-print(rmse_list)
 plt.figure()
 plt.scatter([1,2,3,4,5], rmse_list, color='red')
 plt.plot([1,2,3,4,5], rmse_list, color='blue', linestyle='--')
