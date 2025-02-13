@@ -13,9 +13,6 @@ df = pd.read_csv(file_path)
 L = list(df['L'])
 T = list(df['T'])
 
-print(L)
-print(T)
-
 # Finding Best-Fitted Lines Using Linear Regression
 coefficient_fit = np.polyfit(L, T, deg=1)
 f1 = np.poly1d(coefficient_fit)
@@ -33,6 +30,7 @@ plt.legend()
 plt.title('L vs T')
 plt.xlabel('L')
 plt.ylabel('T')
+plt.grid(True)
 
 # Display the Graph
 plt.show()

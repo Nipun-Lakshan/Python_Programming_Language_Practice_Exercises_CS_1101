@@ -1,1 +1,1 @@
-plt.scatter(bmi_smoker_list, charges_smoker_list, color='blue', label='Smoker')
+rmse = np.sqrt(np.mean((y - y_fit)**2))
