@@ -3,7 +3,7 @@
 # Import Clustering Algorithm
 from sklearn.cluster import KMeans
 
-# Import Matplotlib Library For Potting Graphs
+# Import Matplotlib Library For Plotting Graphs
 import matplotlib.pyplot as plt
 
 # X axis points
@@ -12,25 +12,24 @@ x = [4, 5, 10, 4, 3, 11, 14, 6, 10, 12]
 # Y axis points
 y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
 
-# Combine x and y coordinates into a list of tuples [each point as (x, y)]
+# Combine x and y coordinates into a list of tuples [Each point as (x, y)]
 data = list(zip(x, y))
 
-# Create a KMeans clustering model with 2 clusters
-kmeans = KMeans(n_clusters= 2)
+# List of Inertia
+inertia = []
 
-# Fit the KMeans model to the data [Perform Clustering]
-kmeans.fit(data)
+# Running a Loop to Calculate Inertia From Cluster 1 to 10 and Create a List of Inertia
+for cluster in range(1, 11):
+    kmeans = KMeans(n_clusters= cluster)
+    kmeans.fit(data)
+    inertia.append(kmeans.inertia_)
 
-print(kmeans.inertia_)
-
-# Scatter plot the data points, coloring them based on their cluster labels
-plt.scatter(x, y, c=kmeans.labels_)
-
-# Print the cluster labels assigned to each data point
-print(kmeans.labels_)
-
-# Print the coordinates of the cluster centroids (Center points of each cluster)
-print(kmeans.cluster_centers_)
-
-# Display the scatter plot
+# Plot the Graph
+plt.scatter(list(range(1, 11)), inertia)
+plt.plot(list(range(1, 11)), inertia, color='r')
+plt.xlabel('Number of Clusters')
+plt.ylabel('Inertia')
+plt.title('Elbow Method')
+plt.xticks(range(1, 11))
+plt.grid(True)
 plt.show()
